@@ -80,6 +80,7 @@ VITE_API_URL=http://localhost:5000
 
 ```env
 PORT=5000
+FRONTEND_URL=your_url
 
 FORM_RECOGNIZER_ENDPOINT=your_azure_endpoint
 FORM_RECOGNIZER_API_KEY=your_azure_api_key
