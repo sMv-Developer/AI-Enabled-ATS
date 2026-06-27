@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import { Card, CardContent } from "../components/common/card"
+import { Card, CardContent } from "../components/common/Card"
 import { Brain, Sparkles, Target, Cpu } from 'lucide-react'
 
 export function About() {
