@@ -1,4 +1,4 @@
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import {
   createBrowserRouter,
   RouterProvider,
@@ -18,7 +18,14 @@ import {
 
 function AppRouter() {
   const { data, setData } = useDataContext();
-
+  useEffect(() => {
+  const backendUrl =  import.meta.env.VITE_API_URL;
+  if (backendUrl) {
+    fetch(`${backendUrl}`)
+      .then(() => console.log("Wake-up ping sent!"))
+      .catch((err) => console.warn("Initialization ping failed:", err));
+   }
+ }, []);
   const router = useMemo(
     () =>
       createBrowserRouter([
